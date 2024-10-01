@@ -15,11 +15,11 @@ on:
 jobs:
   resusable-job:
     runs-on: ubuntu-latest
+    outputs:
+      current-time: ${{ steps.time.outputs.time }}
     steps:
       - name: Greet someone
         run: echo 'Hello ${{ inputs.who-to-greet }}'
       - id: time
         name: Set current time
         run: echo "time=$(date)" >> $GITHUB_OUTPUT
-    outputs:
-      current-time: ${{ steps.time.outputs.time }}
