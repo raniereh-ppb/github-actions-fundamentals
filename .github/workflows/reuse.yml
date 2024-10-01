@@ -1,0 +1,4 @@
+name: Reuse other workflow
+
+on: [workflow_dispatch]
+  
